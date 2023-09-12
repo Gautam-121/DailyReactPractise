@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>React Part 01</title>
+  </head>
+  <body>
+    <div id="head"></div>
+    <div id="head1"></div>
+    <h1>Namaste World</h1>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Namaste World by javascript";
+      const root = document.getElementById("head");
+      root.append(heading);
+    </script>
+    <script>
+        const reactElement = React.createElement("h1" , {id : "heading"} , "THis is Heading come From React")
+        //At The end of the day reactElement is javascript object has contaon some key value pair
+        console.log(reactElement)
+
+        const roots = ReactDOM.createRoot(document.getElementById("head1"))
+
+        roots.render(reactElement)
+    </script>
+  </body>
+</html>
